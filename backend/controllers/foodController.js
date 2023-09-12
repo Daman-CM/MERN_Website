@@ -53,7 +53,7 @@ const createFood = async (req, res) => {
   try {
     const user_id = req.user._id
     const food = await Food.create({name, company, amount, calories,user_id})
-    res.status(200).json(workout)
+    res.status(200).json(food)
   } catch (error) {
     res.status(400).json({error: error.message})
   }

@@ -10,17 +10,17 @@ export const FoodsContext = createContext()
 //Inside this Reducer Function we have three different cases
 export const foodsreducer = ( state, action ) => {
     switch(action.type){
-        //Set Food is used when we fetch all of the workouts to begin with like in the Home component
+        //Set Food is used when we fetch all of the foods to begin with like in the Home component
         case 'SET_FOODS':
             return{
                 foods: action.payload
             }
-        //Create Food is used when submit the form and add a new Workout to the database
+        //Create Food is used when submit the form and add a new Food to the database
         case 'CREATE_FOOD':
              return{
                  foods: [action.payload, ...state.foods]
             }
-        //Delete Food is used after we hit the delete button and remove a workout from the database
+        //Delete Food is used after we hit the delete button and remove a food from the database
         case 'DELETE_FOOD':
              return{
                  foods: state.foods.filter((w) => w._id !== action.payload._id )

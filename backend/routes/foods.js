@@ -1,6 +1,6 @@
 //This is where we register all the food routes
 //Each Route is hooked up to different Controller Functions
-//The Controller functions are from workoutController.js
+//The Controller functions are from foodController.js
 const express = require('express')
 const {
     getFoods,
